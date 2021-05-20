@@ -30,4 +30,25 @@ if [[ ! -x "$ZRN" ]]; then
 
 fi
 
-echo "zrn is already installed!"
+case $1 in
+
+update)
+  if [[ $(id -u) -ne 0 ]]; then
+    echo
+    echo "error: update must be done using $(tput setaf 3)sudo$(tput sgr0)"
+    echo
+    exit 1
+  fi
+
+  curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh >$ZRN
+  chmod +x $ZRN
+
+  echo
+  echo "success: $(tput setaf 2)zrn updated successfully!$(tput sgr0)"
+  echo
+  exit 0
+  ;;
+
+*) echo "be careful what you wish for!" ;;
+
+esac
