@@ -1,16 +1,22 @@
 #!/bin/bash
 
+# identifying os
 case $(uname) in
+
 Darwin) ZRN=/usr/local/bin/zrn ;;
+
 Linux) ZRN=/usr/bin/zrn ;;
+
 *)
   echo
   echo "OS not supported yet! Tune in later!"
   echo
   exit 0
   ;;
+
 esac
 
+# zrn installation
 if [[ ! -x "$ZRN" ]]; then
 
   if [[ $(id -u) -ne 0 ]]; then
@@ -32,6 +38,7 @@ fi
 
 case $1 in
 
+# zrn update
 update)
 
   if [[ $(id -u) -ne 0 ]]; then
@@ -50,6 +57,7 @@ update)
   exit 0
   ;;
 
+# zrn help
 *) echo "be careful what you wish for!" ;;
 
 esac
