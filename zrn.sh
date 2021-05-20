@@ -18,7 +18,7 @@ addZrn() {
   chmod +x $ZRN
 
   echo
-  echo "success: $(tput setaf 2)add zrn $VERSION$(tput sgr0)"
+  echo "success: $(tput setaf 2)added zrn $VERSION$(tput sgr0)"
   echo
   exit 0
 }
