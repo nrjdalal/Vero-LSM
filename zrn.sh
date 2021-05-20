@@ -16,9 +16,7 @@ rootCheck() {
 }
 
 addZrn() {
-  echo
   curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh >$ZRN
-  echo
   chmod +x $ZRN
 
   echo
