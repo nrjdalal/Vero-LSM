@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# functions
+rootCheck() {
+  if [[ $(id -u) -ne 0 ]]; then
+    echo
+    echo "error: given command must be run using $(tput setaf 3)sudo$(tput sgr0)"
+    echo
+    exit 1
+  fi
+}
+
 # identifying os
 case $(uname) in
 
@@ -19,12 +29,7 @@ esac
 # zrn installation
 if [[ ! -x "$ZRN" ]]; then
 
-  if [[ $(id -u) -ne 0 ]]; then
-    echo
-    echo "error: installation must be done using $(tput setaf 3)sudo$(tput sgr0)"
-    echo
-    exit 1
-  fi
+  rootCheck
 
   curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh >$ZRN
   chmod +x $ZRN
@@ -41,12 +46,7 @@ case $1 in
 # zrn update
 update)
 
-  if [[ $(id -u) -ne 0 ]]; then
-    echo
-    echo "error: update must be done using $(tput setaf 3)sudo$(tput sgr0)"
-    echo
-    exit 1
-  fi
+  rootCheck
 
   curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh >$ZRN
   chmod +x $ZRN
