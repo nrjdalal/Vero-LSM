@@ -1,8 +1,13 @@
 #!/bin/bash
 
-updated_version="0.0.4-rc"
-
 # sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh)"
+
+check_version() {
+  current_version="0.0.4-rc"
+  updated_version="$(curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh | sed -n '6p' | sed 's/  version="//' | sed 's/"//')"
+  echo $current_version
+  echo $updated_version
+}
 
 # ------------------------------ 00) functions ------------------------------
 
@@ -16,9 +21,6 @@ rootCheck() {
 }
 
 addZrn() {
-  echo
-  echo "current_version=$updated_version"
-
   curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh >$ZRN | sed -n '3p'
   chmod +x $ZRN
 
@@ -53,6 +55,10 @@ fi
 case $1 in
 
 # ------------------------------ 02) update ------------------------------
+
+version) check_version ;;
+
+# ------------------------------ 03) update ------------------------------
 
 update)
 
