@@ -36,7 +36,7 @@ addZrn() {
 
 }
 
-# ------------------------------ 01) auto-install ------------------------------
+# ------------------------------ auto-install ------------------------------
 
 case $(uname) in
 
@@ -60,9 +60,9 @@ fi
 
 case $1 in
 
-# ------------------------------ 02) update ------------------------------
+# ------------------------------ version ------------------------------
 
--v | -version)
+-v | -version | --version)
 
   checkLatest
 
@@ -83,6 +83,45 @@ update | upgrade)
 
   rootCheck
   addZrn
+
+  ;;
+
+# ------------------------------ homebrew ------------------------------
+
+brew | homebrew)
+
+  case $2 in
+
+  install)
+
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+    ;;
+
+  *)
+
+    if brew --version >/dev/null 2>/dev/null; then
+      brew --verion
+    else
+      echo "error: homebrew not found"
+      echo "run $(tput setaf 3)zrn brew install$(tput sgr0) to install"
+    fi
+
+    ;;
+
+  esac
+
+  ;;
+
+# ------------------------------ github-cli ------------------------------
+
+gh | github)
+
+  gh --version >/dev/null 2>/dev/null
+  CHECK=$?
+  if [[ $CHECK -ne 0 ]]; then
+    echo "ghcli not found"
+  fi
 
   ;;
 
