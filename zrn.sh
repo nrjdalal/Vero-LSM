@@ -17,7 +17,7 @@ rootCheck() {
 
 addZrn() {
   echo
-  echo "current_version=$VERSION"
+  echo "current_version=$updated_version"
 
   curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh >$ZRN | sed -n '3p'
   chmod +x $ZRN
