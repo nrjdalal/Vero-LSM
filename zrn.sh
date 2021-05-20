@@ -9,7 +9,7 @@ Linux) ZRN=/usr/bin/zrn ;;
 
 *)
   echo
-  echo "OS not supported yet! Tune in later!"
+  echo "os not supported yet! tune in later!"
   echo
   exit 0
   ;;
