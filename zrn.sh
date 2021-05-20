@@ -1,8 +1,6 @@
 #!/bin/bash
 
-VERSION="0.0.3-rc"
-
-echo $VERSION
+updated_version="0.0.4-rc"
 
 # sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh)"
 
@@ -18,9 +16,10 @@ rootCheck() {
 }
 
 addZrn() {
-  curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh >$ZRN
   echo
-  sed -n '3p' <$ZRN
+  echo "current_version=$VERSION"
+
+  curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh >$ZRN | sed -n '3p'
   chmod +x $ZRN
 
   echo
