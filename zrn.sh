@@ -1,5 +1,7 @@
 #!/bin/bash
 
+VERSION="0.0.1-rc"
+
 # ------------------------------ 00) functions ------------------------------
 
 rootCheck() {
@@ -14,6 +16,11 @@ rootCheck() {
 addZrn() {
   curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh >$ZRN
   chmod +x $ZRN
+
+  echo
+  echo "success: $(tput setaf 2)add zrn $VERSION$(tput sgr0)"
+  echo
+  exit 0
 }
 
 # ------------------------------ 01) getting os ------------------------------
@@ -36,13 +43,7 @@ esac
 if [[ ! -x "$ZRN" ]]; then
 
   rootCheck
-
   addZrn
-
-  echo
-  echo "success: $(tput setaf 2)zrn installed successfully!$(tput sgr0)"
-  echo
-  exit 0
 
 fi
 
@@ -53,17 +54,16 @@ case $1 in
 update)
 
   rootCheck
-
   addZrn
 
-  echo
-  echo "success: $(tput setaf 2)zrn updated successfully!$(tput sgr0)"
-  echo
-  exit 0
   ;;
 
 # ------------------------------ SELF HELP ------------------------------
 
-*) echo "be careful what you wish for!" ;;
+*)
+  echo
+  echo "be careful what you wish for!"
+  echo
+  ;;
 
 esac
