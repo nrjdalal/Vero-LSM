@@ -1,10 +1,16 @@
 #!/bin/bash
 
-version="0.0.8-rc"
+version="0.0.9-rc"
 
 # sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh)"
 
 # ------------------------------ 00) functions ------------------------------
+
+checkLatest() {
+
+  latest_version="$(curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh | sed -n '3p' | sed 's/version="//' | sed 's/"//')"
+
+}
 
 rootCheck() {
 
@@ -14,12 +20,6 @@ rootCheck() {
     echo
     exit 1
   fi
-
-}
-
-checkLatest() {
-
-  latest_version="$(curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh | sed -n '3p' | sed 's/version="//' | sed 's/"//')"
 
 }
 
