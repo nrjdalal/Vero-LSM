@@ -59,8 +59,8 @@ case $1 in
 version)
 
   checkLatest
-  echo $version
-  echo $latest_version
+  echo "Current version - $version"
+  echo "Latest version - $latest_version"
 
   ;;
 
