@@ -1,6 +1,15 @@
 #!/bin/bash
 
-ZRN=/usr/local/bin/zrn
+case $(uname) in
+Darwin) ZRN=/usr/local/bin/zrn ;;
+Linux) ZRN=/usr/bin/zrn ;;
+*)
+  echo
+  echo "OS not supported yet! Tune in later!"
+  echo
+  exit 0
+  ;;
+esac
 
 if [[ ! -x "$ZRN" ]]; then
 
@@ -11,8 +20,8 @@ if [[ ! -x "$ZRN" ]]; then
     exit 1
   fi
 
-  curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh >/usr/local/bin/zrn
-  chmod +x /usr/local/bin/zrn
+  curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh >$ZRN
+  chmod +x $ZRN
 
   echo
   echo "success: $(tput setaf 2)zrn installed successfully$(tput sgr0)"
