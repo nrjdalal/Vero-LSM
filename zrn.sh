@@ -1,6 +1,6 @@
 #!/bin/bash
 
-version="0.0.5-rc"
+version="0.0.6-rc"
 
 # sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh)"
 
