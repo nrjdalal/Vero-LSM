@@ -33,6 +33,7 @@ fi
 case $1 in
 
 update)
+
   if [[ $(id -u) -ne 0 ]]; then
     echo
     echo "error: update must be done using $(tput setaf 3)sudo$(tput sgr0)"
