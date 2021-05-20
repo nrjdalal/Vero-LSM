@@ -1,3 +1,4 @@
 #!/bin/bash
 
-curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh >/bin/zrn
+sudo curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh >/bin/zrn
+sudo chmod +x /bin/zrn
