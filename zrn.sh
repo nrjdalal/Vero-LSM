@@ -4,7 +4,7 @@ version="0.0.9-rc"
 
 # sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh)"
 
-# ------------------------------ 00) functions ------------------------------
+# ------------------------------ functions ------------------------------
 
 checkLatest() {
 
@@ -36,7 +36,7 @@ addZrn() {
 
 }
 
-# ------------------------------ 01) installation ------------------------------
+# ------------------------------ 01) auto-install ------------------------------
 
 case $(uname) in
 
@@ -79,7 +79,7 @@ version)
 
 # ------------------------------ 03) update ------------------------------
 
-update)
+update | upgrade)
 
   rootCheck
   addZrn
@@ -93,6 +93,7 @@ update)
   echo
   echo "be careful what you wish for!"
   echo
+
   ;;
 
 esac
