@@ -1,6 +1,8 @@
 #!/bin/bash
 
-VERSION="0.0.2-rc"
+VERSION="0.0.3-rc"
+
+echo $VERSION
 
 # sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh)"
 
@@ -17,10 +19,12 @@ rootCheck() {
 
 addZrn() {
   curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh >$ZRN
+  echo
+  sed -n '3p' <$ZRN
   chmod +x $ZRN
 
   echo
-  echo "success: $(tput setaf 2)added zrn $VERSION$(tput sgr0)"
+  echo "success: $(tput setaf 2)zrn added successfully!$(tput sgr0)"
   echo
   exit 0
 }
