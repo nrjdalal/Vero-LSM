@@ -1,6 +1,6 @@
 #!/bin/bash
 
-version="0.0.9-rc"
+version="0.0.10"
 
 # sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh)"
 
@@ -62,7 +62,7 @@ case $1 in
 
 # ------------------------------ 02) update ------------------------------
 
-version)
+-v | -version)
 
   checkLatest
 
