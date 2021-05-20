@@ -2,7 +2,7 @@
 
 VERSION="0.0.2-rc"
 
-# Install using - sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh)"
+# sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh)"
 
 # ------------------------------ 00) functions ------------------------------
 
