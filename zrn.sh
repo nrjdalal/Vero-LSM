@@ -2,6 +2,8 @@
 
 VERSION="0.0.2-rc"
 
+# Install using - sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh)"
+
 # ------------------------------ 00) functions ------------------------------
 
 rootCheck() {
@@ -15,7 +17,7 @@ rootCheck() {
 
 addZrn() {
   echo
-  curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh >$ZRN | grep -m 1 VERSION=
+  curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh >$ZRN
   echo
   chmod +x $ZRN
 
