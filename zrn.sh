@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# functions
+# ------------------------------ 00) functions ------------------------------
+
 rootCheck() {
   if [[ $(id -u) -ne 0 ]]; then
     echo
@@ -10,13 +11,17 @@ rootCheck() {
   fi
 }
 
-# identifying os
+addZrn() {
+  curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh >$ZRN
+  chmod +x $ZRN
+}
+
+# ------------------------------ 01) getting os ------------------------------
+
 case $(uname) in
 
 Darwin) ZRN=/usr/local/bin/zrn ;;
-
 Linux) ZRN=/usr/bin/zrn ;;
-
 *)
   echo
   echo "os not supported yet! tune in later!"
@@ -26,13 +31,13 @@ Linux) ZRN=/usr/bin/zrn ;;
 
 esac
 
-# zrn installation
+# ------------------------------ 02) installation ------------------------------
+
 if [[ ! -x "$ZRN" ]]; then
 
   rootCheck
 
-  curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh >$ZRN
-  chmod +x $ZRN
+  addZrn
 
   echo
   echo "success: $(tput setaf 2)zrn installed successfully!$(tput sgr0)"
@@ -43,13 +48,13 @@ fi
 
 case $1 in
 
-# zrn update
+# ------------------------------ 03) update ------------------------------
+
 update)
 
   rootCheck
 
-  curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/zrn.sh >$ZRN
-  chmod +x $ZRN
+  addZrn
 
   echo
   echo "success: $(tput setaf 2)zrn updated successfully!$(tput sgr0)"
@@ -57,7 +62,8 @@ update)
   exit 0
   ;;
 
-# zrn help
+# ------------------------------ SELF HELP ------------------------------
+
 *) echo "be careful what you wish for!" ;;
 
 esac
