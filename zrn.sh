@@ -24,10 +24,10 @@ if [[ ! -x "$ZRN" ]]; then
   chmod +x $ZRN
 
   echo
-  echo "success: $(tput setaf 2)zrn installed successfully$(tput sgr0)"
+  echo "success: $(tput setaf 2)zrn installed successfully!$(tput sgr0)"
   echo
   exit 0
 
 fi
 
-echo "zrn is already installed"
+echo "zrn is already installed!"
