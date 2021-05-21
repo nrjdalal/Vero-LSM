@@ -1,10 +1,13 @@
 #!/bin/bash
 set -u
 
-curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/utils.sh >/tmp/utils.sh
+URL="https://raw.githubusercontent.com/nrjdalal/zrn/master"
 
-# source /tmp/utils.sh
+new=${URL}/utils.sh
 
-rm utils.sh
+TBS=$(mktemp)
+curl -fsSL $new
 
-echo "${Magenta}hello world!${Off}"
+# source $TBS
+
+# echo "${Magenta}hello world!${Off}"
