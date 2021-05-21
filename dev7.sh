@@ -2,6 +2,6 @@
 
 curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/utils.sh >/tmp/utils.sh
 
-cat /tmp/utils.sh
+source /tmp/utils.sh
 
-# echo "${Magenta}hello world!${Off}"
+echo "${Magenta}hello world!${Off}"
