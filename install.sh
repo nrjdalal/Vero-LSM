@@ -7,7 +7,7 @@ abort() {
 
 OS="$(uname)"
 if [[ "$OS" == "Linux" ]]; then
-  echo "linux"
-elif [[ "$OS" == "Darwin" ]]; then
-  echo "darwin"
+  HOMEBREW_ON_LINUX=1
+elif [[ "$OS" != "Darwin" ]]; then
+  abort "Homebrew is only supported on macOS and Linux."
 fi
