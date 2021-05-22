@@ -14,7 +14,7 @@ source $LIB/utils.sh
 
 case $1 in
 adduser)
-  _linux
+  _LINUX
   src "https://raw.githubusercontent.com/nrjdalal/zrn/master/_linux/adduser.sh"
   ;;
 esac

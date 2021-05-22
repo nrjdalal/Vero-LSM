@@ -25,8 +25,8 @@ success() {
   printf "${green}%s${OFF}\n" "$@"
 }
 
-SUCCESS() {
-  printf "\n${BOLD}${green}%s${OFF}\n\n" "$@"
+_SUCCESS() {
+  printf "\n${GREEN}   ${OFF}${BOLD}${green}%s${OFF}\n\n" "$@"
   exit 0
 }
 
@@ -34,14 +34,14 @@ failure() {
   printf "${red}%s${OFF}\n" "$@"
 }
 
-FAILURE() {
-  printf "\n${BOLD}${red}%s${OFF}\n\n" "$@"
+_FAILURE() {
+  printf "\n${RED}   ${OFF}${BOLD}${red}%s${OFF}\n\n" "$@"
   exit 1
 }
 
 rootCheck() {
   if [[ $(id -u) -ne 0 ]]; then
-    FAILURE "Given command requires sudo access."
+    _FAILURE "Given command requires sudo access."
   fi
 }
 
@@ -52,14 +52,14 @@ src() {
   rm $file
 }
 
-_darwin() {
+_DARWIN() {
   if [[ "$(uname)" != "Linux" ]]; then
-    FAILURE "This is macOS only command!"
+    _FAILURE "This is macOS only command!"
   fi
 }
 
-_linux() {
+_LINUX() {
   if [[ "$(uname)" != "Linux" ]]; then
-    FAILURE "This is Linux only command!"
+    _FAILURE "This is Linux only command!"
   fi
 }

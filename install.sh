@@ -6,7 +6,7 @@ source $file
 rm $file
 
 if [[ -z "${BASH_VERSION}" ]]; then
-  FAILURE "Bash is required to interpret this script."
+  _FAILURE "Bash is required to interpret this script."
 fi
 
 OS="$(uname)"
@@ -21,7 +21,7 @@ Darwin)
   success "macOS detected. Installing zrn."
   BIN=/usr/local/bin && LIB=/usr/local/lib/zrn
   ;;
-*) FAILURE "zrn is only supported on macOS and Linux." ;;
+*) _FAILURE "zrn is only supported on macOS and Linux." ;;
 esac
 
 # SUDO CHECK
@@ -33,4 +33,4 @@ chmod +x $BIN/zrn
 mkdir -p $LIB/zrn
 curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/utils.sh >$LIB/utils.sh
 
-SUCCESS "zrn is installed."
+_SUCCESS "zrn is installed."
