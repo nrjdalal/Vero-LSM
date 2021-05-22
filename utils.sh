@@ -1,19 +1,40 @@
 #!/bin/bash
 
-Bold=$(tput bold)
+black=$(tput setaf 0)
+red=$(tput setaf 1)
+green=$(tput setaf 2)
+yellow=$(tput setaf 3)
+blue=$(tput setaf 4)
+magenta=$(tput setaf 5)
+cyan=$(tput setaf 6)
+white=$(tput setaf 7)
 
-Black=$(tput setaf 0)
-Red=$(tput setaf 1)
-Green=$(tput setaf 2)
-Yellow=$(tput setaf 3)
-Blue=$(tput setaf 4)
-Magenta=$(tput setaf 5)
-Cyan=$(tput setaf 6)
-White=$(tput setaf 7)
+BLACK=$(tput setab 0)
+RED=$(tput setab 1)
+GREEN=$(tput setab 2)
+YELLOW=$(tput setab 3)
+BLUE=$(tput setab 4)
+MAGENTA=$(tput setab 5)
+CYAN=$(tput setab 6)
+WHITE=$(tput setab 7)
 
-Off=$(tput sgr0)
+BOLD=$(tput bold)
+OFF=$(tput sgr0)
 
-abort() {
-  printf "%s\n" "$@"
+success() {
+  printf "${green}%s${OFF}\n" "$@"
+}
+
+SUCCESS() {
+  printf "\n${BOLD}${GREEN} SUCCESS ${OFF}${BOLD}${green} %s ${OFF}\n\n" "$@"
+  exit 0
+}
+
+failure() {
+  printf "${red}%s${OFF}\n" "$@"
+}
+
+FAILURE() {
+  printf "\n${BOLD}${RED} FAILURE ${OFF}${BOLD}${red} %s ${OFF}\n\n" "$@"
   exit 1
 }
