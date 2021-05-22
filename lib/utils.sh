@@ -5,10 +5,12 @@ src() {
   rm $tmpfile
 }
 
-URL=$URL
-BIN_URL=$BIN_URL
-LIB_URL=$LIB_URL
-UTILS=$UTILS
+echo "heyo"
+
+URL="$URL"
+BIN_URL="$BIN_URL"
+LIB_URL="$LIB_URL"
+UTILS="$UTILS"
 
 # universal
 src "${UTILS}/colors.sh"
