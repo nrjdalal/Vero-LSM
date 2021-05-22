@@ -1,5 +1,5 @@
 src() {
-  file="$(mktemp)"
+  file="/tmp/zrn.sh"
   curl -fsSL $1 >$file
   source $file
   rm $file
