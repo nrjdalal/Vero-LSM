@@ -24,8 +24,7 @@ Darwin)
 *) _FAILURE "zrn is only supported on macOS and Linux." ;;
 esac
 
-# SUDO CHECK
-rootCheck
+_ONLYSUDO
 # ADDING ZRN TO BIN
 curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/bin/zrn.sh >$BIN/zrn
 chmod +x $BIN/zrn

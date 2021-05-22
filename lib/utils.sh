@@ -16,11 +16,5 @@ src "${UTILS}/colors.sh"
 src "${UTILS}/status.sh"
 
 # dependants
-
-rootCheck() {
-  if [[ $(id -u) -ne 0 ]]; then
-    _FAILURE "Given command requires sudo access."
-  fi
-}
-
+src "${UTILS}/onlysudo.sh"
 src "${UTILS}/osonly.sh"
