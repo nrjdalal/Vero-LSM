@@ -41,15 +41,13 @@ FAILURE() {
 
 rootCheck() {
   if [[ $(id -u) -ne 0 ]]; then
-    FAILURE "given command requires sudo access"
+    FAILURE "Given command requires sudo access."
   fi
 }
 
 src() {
   file="$(mktemp)"
-  curl -fsSL $@ >$file
+  curl -fsSL $1 >$file
   source $file
   rm $file
 }
-
-src "https://raw.githubusercontent.com/nrjdalal/zrn/master/demo.sh"

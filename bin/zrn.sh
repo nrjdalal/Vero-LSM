@@ -12,4 +12,4 @@ esac
 
 source $LIB/utils.sh
 
-echo "Be ${BOLD}BOLD${OFF}"
+src "https://raw.githubusercontent.com/nrjdalal/zrn/master/linux/adduser.sh"
