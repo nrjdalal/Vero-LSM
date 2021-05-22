@@ -24,6 +24,8 @@ Darwin)
 *) FAILURE "zrn is only supported on macOS and Linux." ;;
 esac
 
+rootCheck
+
 curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/bin/zrn.sh >$LOCATION
 chmod +x $LOCATION
 SUCCESS "zrn is installed."
