@@ -25,5 +25,5 @@ Darwin)
 esac
 
 sudo curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/bin/zrn.sh >$LOCATION
-chmod +x $LOCATION
+sudo chmod +x $LOCATION
 SUCCESS "zrn is installed."
