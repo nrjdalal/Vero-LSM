@@ -12,4 +12,4 @@ esac
 
 source $LIB/utils.sh
 
-echo "Be ${BOLD} BOLD${OFF}"
+echo "Be ${BOLD}BOLD${OFF}"
