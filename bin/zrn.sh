@@ -13,5 +13,8 @@ esac
 source $LIB/utils.sh
 
 case $1 in
-adduser) src "https://raw.githubusercontent.com/nrjdalal/zrn/master/_linux/adduser.sh" ;;
+adduser)
+  _linux
+  src "https://raw.githubusercontent.com/nrjdalal/zrn/master/_linux/adduser.sh"
+  ;;
 esac
