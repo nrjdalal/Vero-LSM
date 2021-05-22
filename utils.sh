@@ -38,3 +38,9 @@ FAILURE() {
   printf "\n${BOLD}${RED} FAILURE ${OFF}${BOLD}${red} %s ${OFF}\n\n" "$@"
   exit 1
 }
+
+rootCheck() {
+  if [[ $(id -u) -ne 0 ]]; then
+    FAILURE "Please run installation as a SUDO user."
+  fi
+}
