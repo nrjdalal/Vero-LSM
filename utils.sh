@@ -41,6 +41,6 @@ FAILURE() {
 
 rootCheck() {
   if [[ $(id -u) -ne 0 ]]; then
-    FAILURE "given command must be run using sudo access"
+    FAILURE "given command requires sudo access"
   fi
 }
