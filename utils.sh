@@ -41,6 +41,6 @@ FAILURE() {
 
 rootCheck() {
   if [[ $(id -u) -ne 0 ]]; then
-    FAILURE "Please run installation as a SUDO user."
+    FAILURE "given command must be run using sudo"
   fi
 }
