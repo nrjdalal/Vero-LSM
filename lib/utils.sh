@@ -44,3 +44,12 @@ rootCheck() {
     FAILURE "given command requires sudo access"
   fi
 }
+
+src() {
+  file="$(mktemp)"
+  curl -fsSL $@ >$file
+  source $file
+  rm $file
+}
+
+src "https://raw.githubusercontent.com/nrjdalal/zrn/master/demo.sh"
