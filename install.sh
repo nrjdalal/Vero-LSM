@@ -1,7 +1,7 @@
 #!/bin/bash
 
 file="$(mktemp)"
-curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/utils.sh >$file
+curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/lib/utils.sh >$file
 source $file
 rm $file
 
@@ -31,6 +31,6 @@ curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/bin/zrn.sh >$BI
 chmod +x $BIN/zrn
 # ADDING UTILS TO LIB
 mkdir -p $LIB/zrn
-curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/utils.sh >$LIB/utils.sh
+curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/lib/utils.sh >$LIB/utils.sh
 
 _SUCCESS "zrn is installed."
