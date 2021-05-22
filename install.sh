@@ -1,9 +1,9 @@
 #!/bin/bash
 
-file="$(mktemp)"
-curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/lib/utils.sh >$file
-source $file
-rm $file
+tfile="$(mktemp)"
+curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/lib/utils.sh >$tfile
+source $tfile
+rm $tfile
 
 if [[ -z "${BASH_VERSION}" ]]; then
   _FAILURE "Bash is required to interpret this script."
