@@ -14,16 +14,16 @@ case $OS in
 Linux)
   echo
   success "Linux detected. Installing zrn."
-  LOCATION=/usr/bin
+  LOCATION=/usr/bin/zrn
   ;;
 Darwin)
   echo
   success "macOS detected. Installing zrn."
-  LOCATION=/usr/local/bin
+  LOCATION=/usr/local/bin/zrn
   ;;
 *) FAILURE "zrn is only supported on macOS and Linux." ;;
 esac
 
-curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/bin/zrn.sh >$LOCATION/zrn
-chmod +x $LOCATION/zrn
+curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/bin/zrn.sh >$LOCATION
+chmod +x $LOCATION
 SUCCESS "zrn is installed."
