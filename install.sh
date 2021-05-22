@@ -26,6 +26,6 @@ esac
 
 rootCheck # --- SUDO --- #
 curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/bin/zrn.sh >$BIN/zrn
-chmod +x $BASE/zrn
+chmod +x $BIN/zrn
 curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/utils.sh >$LIB/utils.sh
 SUCCESS "zrn is installed."
