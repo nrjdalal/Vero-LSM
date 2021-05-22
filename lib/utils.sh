@@ -1,7 +1,8 @@
 src() {
-  file="/tmp/zrn.sh"
-  curl -fsSL $1 >$file
-  source $file
+  tmpfile="$(mktemp)"
+  curl -fsSL $1 >$tmpfile
+  source $tmpfile
+  rm $tmpfile
 }
 
 URL="https://raw.githubusercontent.com/nrjdalal/zrn/master"
