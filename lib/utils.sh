@@ -2,7 +2,6 @@ src() {
   file="/tmp/zrn.sh"
   curl -fsSL $1 >$file
   source $file
-  rm $file
 }
 
 URL="https://raw.githubusercontent.com/nrjdalal/zrn/master"
