@@ -26,10 +26,10 @@ esac
 
 _ONLYSUDO
 # ADDING ZRN TO BIN
-curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/bin/zrn.sh >$BIN/zrn
+curl -fsSL $BIN_URL/zrn.sh >$BIN/zrn
 chmod +x $BIN/zrn
 # ADDING UTILS TO LIB
 mkdir -p $LIB/zrn
-curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/lib/utils.sh >$LIB/utils.sh
+curl -fsSL $LIB_URL/utils.sh >$LIB/utils.sh
 
 _SUCCESS "zrn is installed."
