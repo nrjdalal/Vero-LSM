@@ -51,3 +51,15 @@ src() {
   source $file
   rm $file
 }
+
+_darwin() {
+  if [[ "$(uname)" != "Linux" ]]; then
+    FAILURE "This is macOS only command!"
+  fi
+}
+
+_linux() {
+  if [[ "$(uname)" != "Linux" ]]; then
+    FAILURE "This is Linux only command!"
+  fi
+}
