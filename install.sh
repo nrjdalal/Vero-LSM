@@ -1,7 +1,13 @@
 #!/bin/bash
 
+URL="https://raw.githubusercontent.com/nrjdalal/zrn/master"
+
+BIN_URL="${URL}/bin"
+LIB_URL="${URL}/lib"
+UTILS="${URL}/utils"
+
 tfile="$(mktemp)"
-curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/lib/utils.sh >$tfile
+curl -fsSL $LIB_URL/utils.sh >$tfile
 source $tfile
 rm $tfile
 

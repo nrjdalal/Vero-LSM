@@ -5,11 +5,10 @@ src() {
   rm $tmpfile
 }
 
-URL="https://raw.githubusercontent.com/nrjdalal/zrn/master"
-
-BIN_URL="${URL}/bin"
-LIB_URL="${URL}/lib"
-UTILS="${URL}/utils"
+URL=$URL
+BIN_URL=$BIN_URL
+LIB_URL=$LIB_URL
+UTILS=$UTILS
 
 # universal
 src "${UTILS}/colors.sh"
