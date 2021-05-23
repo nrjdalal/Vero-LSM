@@ -13,8 +13,7 @@ esac
 source $LIB/utils.sh
 
 echo $#
-echo $?
-echo $@
+echo $1
 echo $2
 
 case $1 in
