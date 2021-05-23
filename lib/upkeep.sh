@@ -1,3 +1,4 @@
+_LINUX
 _ONLYSUDO
 
 echo

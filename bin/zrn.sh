@@ -12,18 +12,13 @@ esac
 
 source $LIB/utils.sh
 
-if [[ "$OS" == "Linux" ]]; then
-  case $1 in
-  adduser) src "https://raw.githubusercontent.com/nrjdalal/zrn/master/_linux/adduser.sh" ;;
-  install)
-    case $2 in
-    homebrew) src "https://raw.githubusercontent.com/nrjdalal/zrn/master/_linux/homebrew.sh" ;;
-    esac
-    ;;
-  upkeep) src "https://raw.githubusercontent.com/nrjdalal/zrn/master/_linux/upkeep.sh" ;;
-  esac
-fi
-
 case $1 in
-update) /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/install.sh)" ;;
+adduser) src "${LIB_URL}/adduser.sh" ;;
+install)
+  case $2 in
+  homebrew) src "${LIB_URL}/homebrew.sh" ;;
+  esac
+  ;;
+update) /bin/bash -c "$(curl -fsSL ${URL}/install.sh)" ;;
+upkeep) src "${LIB_URL}/upkeep.sh" ;;
 esac
