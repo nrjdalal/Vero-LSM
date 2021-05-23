@@ -1,4 +1,4 @@
-echo "$(date -u +'%y%m%d-%H%M%S')"
+echo "\n$(date -u +'%y%m%d-%H%M%S')"
 
 URL="https://raw.githubusercontent.com/nrjdalal/zrn/master"
 BIN_URL="${URL}/bin"
