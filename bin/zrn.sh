@@ -18,6 +18,7 @@ install)
   case $2 in
   homebrew) src "${LIB_URL}/install/homebrew.sh" ;;
   nginx) src "${LIB_URL}/install/nginx.sh" ;;
+  nodejs) src "${LIB_URL}/install/nodejs.sh" ;;
   esac
   ;;
 update) /bin/bash -c "$(curl -fsSL ${URL}/install.sh)" ;;
