@@ -10,8 +10,6 @@ src() {
   rm $tmpfile
 }
 
-src "${UTILS}/version.sh"
-
 # universal
 src "${UTILS}/colors.sh"
 src "${UTILS}/status.sh"

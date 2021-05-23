@@ -5,6 +5,8 @@ curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/utils/utils.sh 
 source $tfile
 rm $tfile
 
+src "${UTILS}/version.sh"
+
 if [[ -z "${BASH_VERSION}" ]]; then
   _FAILURE "Bash is required to interpret this script."
 fi
