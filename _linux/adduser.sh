@@ -1,4 +1,4 @@
-_LINUX && _ONLYSUDO
+_ONLYSUDO
 
 flag=false
 while [ $flag != true ]; do

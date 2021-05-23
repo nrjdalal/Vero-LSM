@@ -15,5 +15,5 @@ src "${UTILS}/colors.sh"
 src "${UTILS}/status.sh"
 
 # dependants
-src "${UTILS}/onlysudo.sh"
+src "${UTILS}/usertype.sh"
 src "${UTILS}/osonly.sh"

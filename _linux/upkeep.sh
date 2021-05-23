@@ -1,8 +1,8 @@
-_LINUX && _ONLYSUDO
+_ONLYSUDO
 
 echo
-sudo apt update
-sudo apt upgrade -y
-sudo apt autoremove -y
+apt update
+apt upgrade -y
+apt autoremove -y
 
 _SUCCESS "Don't forget to upkeep regularly."
