@@ -16,7 +16,8 @@ case $1 in
 adduser) src "${LIB_URL}/adduser.sh" ;;
 install)
   case $2 in
-  homebrew) src "${LIB_URL}/homebrew.sh" ;;
+  homebrew) src "${LIB_URL}/install/homebrew.sh" ;;
+  nginx) src "${LIB_URL}/install/nginx.sh" ;;
   esac
   ;;
 update) /bin/bash -c "$(curl -fsSL ${URL}/install.sh)" ;;
