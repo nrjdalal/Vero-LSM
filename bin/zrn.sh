@@ -15,6 +15,9 @@ source $LIB/utils.sh
 if [[ "$OS" == "Linux" ]]; then
   case $1 in
   adduser) src "https://raw.githubusercontent.com/nrjdalal/zrn/master/_linux/adduser.sh" ;;
+  install) case $2 in
+    homebrew) src "https://raw.githubusercontent.com/nrjdalal/zrn/master/_linux/homebrew.sh" ;;
+    esac ;;
   upkeep) src "https://raw.githubusercontent.com/nrjdalal/zrn/master/_linux/upkeep.sh" ;;
   esac
 fi
