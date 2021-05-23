@@ -1,3 +1,5 @@
+echo "$(date -u +'%y%m%d-%H%M%S')"
+
 URL="https://raw.githubusercontent.com/nrjdalal/zrn/master"
 BIN_URL="${URL}/bin"
 LIB_URL="${URL}/lib"
