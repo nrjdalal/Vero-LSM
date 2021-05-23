@@ -32,4 +32,4 @@ chmod +x $BIN/zrn
 mkdir -p $LIB/zrn
 curl -fsSL $UTILS/utils.sh >$LIB/utils.sh
 
-_SUCCESS "zrn is installed."
+_SUCCESS "zrn is successfully installed."
