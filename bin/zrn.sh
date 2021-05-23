@@ -12,6 +12,11 @@ esac
 
 source $LIB/utils.sh
 
+echo $#
+echo $?
+echo $@
+echo $2
+
 case $1 in
 adduser) src "${LIB_URL}/adduser.sh" ;;
 install | i) src "${LIB_URL}/install.sh" ;;
