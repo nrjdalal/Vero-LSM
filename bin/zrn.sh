@@ -14,13 +14,7 @@ source $LIB/utils.sh
 
 case $1 in
 adduser) src "${LIB_URL}/adduser.sh" ;;
-install)
-  case $2 in
-  homebrew) src "${LIB_URL}/install/homebrew.sh" ;;
-  nginx) src "${LIB_URL}/install/nginx.sh" ;;
-  nodejs) src "${LIB_URL}/install/nodejs.sh" ;;
-  esac
-  ;;
+install | i) src "${LIB_URL}/install.sh" ;;
 update) /bin/bash -c "$(curl -fsSL ${URL}/install.sh)" ;;
 upkeep) src "${LIB_URL}/upkeep.sh" ;;
 esac
