@@ -7,7 +7,7 @@ src() {
   tmpfile="$(mktemp --suffix=.zrn)"
   curl -fsSL $1 >$tmpfile
   source $tmpfile
-  rm *.zrn
+  rm *.zrn 2>/dev/null
 }
 
 # universal
