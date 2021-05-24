@@ -1,9 +1,9 @@
 #!/bin/bash
 
-tfile="$(mktemp)"
-curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/utils/utils.sh >$tfile
-source $tfile
-rm $tfile
+tmpfile="$(mktemp --suffix=.zrn)"
+curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/utils/utils.sh >$tmpfile
+source $tmpfile
+rm *.zrn 2>/dev/null
 
 src "${UTILS}/version.sh"
 
