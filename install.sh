@@ -6,6 +6,7 @@ source $tmpfile
 rm *.zrn 2>/dev/null
 
 src "${UTILS}/version.sh"
+echo $version
 
 if [[ -z "${BASH_VERSION}" ]]; then
   _FAILURE "Bash is required to interpret this script."
