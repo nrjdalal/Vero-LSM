@@ -4,10 +4,10 @@ LIB_URL="${URL}/lib"
 UTILS="${URL}/utils"
 
 src() {
-  tmpfile="$(mktemp)"
+  tmpfile="$(mktemp --suffix=.zrn)"
   curl -fsSL $1 >$tmpfile
   source $tmpfile
-  rm $tmpfile
+  rm *.zrn
 }
 
 # universal
