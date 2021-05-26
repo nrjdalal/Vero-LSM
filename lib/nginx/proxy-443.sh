@@ -11,7 +11,7 @@ server {
   server_name $DOMAIN www.$DOMAIN;
 
   listen 80;
-  listen [::]:80 ipv6only=on;
+  listen [::]:80;
 
   return 301 https://\$host\$request_uri;
 }
@@ -22,7 +22,7 @@ server {
   server_name $DOMAIN www.$DOMAIN;
 
   listen 443 ssl;
-  listen [::]:443 ssl ipv6only=on;
+  listen [::]:443 ssl;
 
   ssl_certificate /etc/letsencrypt/live/$DOMAIN/fullchain.pem;
   ssl_certificate_key /etc/letsencrypt/live/$DOMAIN/privkey.pem;

@@ -11,7 +11,7 @@ server {
   server_name $DOMAIN www.$DOMAIN;
 
   listen 80;
-  listen [::]:80 ipv6only=on;
+  listen [::]:80;
 
   location / {
     proxy_pass http://127.0.0.1:$PORT;
