@@ -22,5 +22,4 @@ nginx) src "${LIB_URL}/nginx.sh" ;;
 update) /bin/bash -c "$(curl -fsSL ${URL}/install.sh)" ;;
 upkeep) src "${LIB_URL}/upkeep.sh" ;;
 -v | -version | --version) src "${LIB_URL}/version.sh" ;;
-*) echo && echo "cmd not found" && echo ;;
 esac
