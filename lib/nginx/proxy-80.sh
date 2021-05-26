@@ -1,3 +1,6 @@
+_LINUX
+_ONLYSUDO
+
 echo
 
 read -p "Enter domain name ~ " DOMAIN
