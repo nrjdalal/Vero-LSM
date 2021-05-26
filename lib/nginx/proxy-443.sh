@@ -13,7 +13,7 @@ server {
   listen 80;
   listen [::]:80 ipv6only=on;
 
-  return 301 https://$host$request_uri;
+  return 301 https://\$host\$request_uri;
 }
 CONF
 
