@@ -40,7 +40,7 @@ ln -s /etc/nginx/sites-available/$DOMAIN.443.conf /etc/nginx/sites-enabled/$DOMA
 
 nginx -s reload
 
+echo
 echo "Config 80 created. Verify by ~ $(tput setaf 3)cat /etc/nginx/sites-enabled/$DOMAIN.80.conf$(tput sgr0)"
 echo "Config 443 created. Verify by ~ $(tput setaf 3)cat /etc/nginx/sites-enabled/$DOMAIN.443.conf$(tput sgr0)"
-
 echo
