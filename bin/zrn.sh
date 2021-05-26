@@ -16,6 +16,7 @@ X=("$@")
 
 case ${X[0]} in
 adduser) src "${LIB_URL}/adduser.sh" ;;
+certbot) src "${LIB_URL}/certbot.sh" ;;
 install | i) src "${LIB_URL}/install.sh" ;;
 nginx) src "${LIB_URL}/nginx.sh" ;;
 update) /bin/bash -c "$(curl -fsSL ${URL}/install.sh)" ;;
