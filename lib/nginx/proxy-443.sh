@@ -8,7 +8,7 @@ read -p "Enter proxy :port ~ " PORT
 
 cat >/etc/nginx/sites-available/$DOMAIN.80.conf <<CONF
 server {
-  server_name $DOMAIN;
+  server_name $DOMAIN www.$DOMAIN;
 
   listen 80;
   listen [::]:80;
@@ -19,7 +19,7 @@ CONF
 
 cat >/etc/nginx/sites-available/$DOMAIN.443.conf <<CONF
 server {
-  server_name $DOMAIN;
+  server_name $DOMAIN www.$DOMAIN;
 
   listen 443 ssl;
   listen [::]:443 ssl;
