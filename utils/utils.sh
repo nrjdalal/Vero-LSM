@@ -1,4 +1,4 @@
-Version="210527-201341"
+Version="210527-201646"
 
 URL="https://raw.githubusercontent.com/nrjdalal/zrn/master"
 BIN_URL="${URL}/bin"
@@ -9,14 +9,12 @@ src() {
   tmpfile="$(mktemp).zrn"
   curl -fsSL $1 >$tmpfile
   source $tmpfile
-  rm *.zrn 2>/dev/null
 }
 
 srcpart() {
   tmpfile="$(mktemp).zrn"
   curl -fsSL $1 | head -n$2 | tail -n$3 >$tmpfile
   source $tmpfile
-  rm *.zrn 2>/dev/null
 }
 
 # universal
