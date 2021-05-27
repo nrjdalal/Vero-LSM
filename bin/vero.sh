@@ -8,7 +8,6 @@ source $LIB/utils.sh
 
 X=("$@")
 
-echo
 case ${X[0]} in
 adduser) src "${LIB_URL}/adduser.sh" ;;
 certbot) src "${LIB_URL}/certbot.sh" ;;
@@ -18,5 +17,3 @@ nginx) src "${LIB_URL}/nginx.sh" ;;
 update) /bin/bash -c "$(curl -fsSL ${URL}/install.sh)" ;;
 -v | -version | --version) src "${LIB_URL}/version.sh" ;;
 esac
-
-_SUCCESS "Tasks executed successfully!"
