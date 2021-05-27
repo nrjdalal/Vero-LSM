@@ -1,11 +1,11 @@
 #!/bin/bash
 
+echo
+
 tmpfile="$(mktemp)"
 curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/utils/utils.sh >$tmpfile
 source $tmpfile
 rm $tmpfile
-
-echo && echo "Ver. ${cyan}${OFF}"
 
 if [[ -z "${BASH_VERSION}" ]]; then
   _FAILURE "Bash is required to interpret this script."
