@@ -1,4 +1,4 @@
-Version="210527-193100"
+Version="210527-193506"
 
 URL="https://raw.githubusercontent.com/nrjdalal/zrn/master"
 BIN_URL="${URL}/bin"

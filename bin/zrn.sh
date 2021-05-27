@@ -1,5 +1,4 @@
-#!/bin/bash
-set -e
+#!/bin/bash -x
 
 OS="$(uname)"
 case $OS in
