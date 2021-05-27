@@ -3,7 +3,10 @@ _ONLYSUDO
 
 echo
 
+echo
 read -p "Enter domain name ~ " DOMAIN
+echo
+echo "Ports in use: "${magenta}$(grep -Eho "127.0.0.1:.{4}" /etc/nginx/sites-available/*.conf | awk '{print substr($0,length($0)-3)}')${OFF}
 read -p "Enter proxy :port ~ " PORT
 
 cat >/etc/nginx/sites-available/$DOMAIN.80.conf <<CONF
