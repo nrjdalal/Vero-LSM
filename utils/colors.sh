@@ -7,6 +7,9 @@ magenta=$(tput setaf 5)
 cyan=$(tput setaf 6)
 white=$(tput setaf 7)
 
+BOLD=$(tput bold)
+OFF=$(tput sgr0)
+
 BLACK=$(tput setab 0)
 RED=$(tput setab 1)
 GREEN=$(tput setab 2)
@@ -15,6 +18,3 @@ BLUE=$(tput setab 4)
 MAGENTA=$(tput setab 5)
 CYAN=$(tput setab 6)
 WHITE=$(tput setab 7)
-
-BOLD=$(tput bold)
-OFF=$(tput sgr0)

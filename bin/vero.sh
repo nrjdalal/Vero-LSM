@@ -1,15 +1,7 @@
 #!/bin/bash
 set -e
 
-OS="$(uname)"
-case $OS in
-Linux)
-  LIB=/usr/lib/zrn
-  ;;
-Darwin)
-  LIB=/usr/local/lib/zrn
-  ;;
-esac
+LIB=/usr/lib/zrn
 
 source $LIB/utils.sh
 

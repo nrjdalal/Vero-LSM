@@ -1,8 +1,9 @@
-Version="210527-215320"
+Version="210527-220315"
 
-BIN=/usr/bin && LIB=/usr/lib/zrn
+BIN=/usr/bin
+LIB=/usr/lib/vero
 
-URL="https://raw.githubusercontent.com/nrjdalal/zrn/master"
+URL="https://raw.githubusercontent.com/nrjdalal/Vero-LSM/master"
 BIN_URL="${URL}/bin"
 LIB_URL="${URL}/lib"
 UTILS="${URL}/utils"
@@ -10,15 +11,17 @@ UTILS="${URL}/utils"
 randomStr="$(base64 </dev/urandom | tr -dc 'a-zA-Z0-9' | head -c12)"
 
 src() {
-  tmpfile="/tmp/zrn.${randomStr}"
+  tmpfile="/tmp/vero.${randomStr}"
   curl -fsSL $1 >$tmpfile
   source $tmpfile
+  rm -f $tmpfile
 }
 
 srcpart() {
-  tmpfile="/tmp/zrn.${randomStr}"
+  tmpfile="/tmp/vero.${randomStr}"
   curl -fsSL $1 | head -n$2 | tail -n$3 >$tmpfile
   source $tmpfile
+  rm -f $tmpfile
 }
 
 # universal
@@ -26,5 +29,4 @@ src "${UTILS}/colors.sh"
 src "${UTILS}/status.sh"
 
 # dependants
-src "${UTILS}/osonly.sh"
 src "${UTILS}/usertype.sh"
