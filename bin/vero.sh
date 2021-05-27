@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+BIN=/usr/bin
 LIB=/usr/lib/vero
 
 source $LIB/utils.sh

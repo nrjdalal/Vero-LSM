@@ -20,9 +20,11 @@ success "Installing Vero ver. ${Version}."
 
 _ONLYSUDO
 # adding Vero to bin
+BIN=/usr/bin
 curl -fsSL $BIN_URL/vero.sh >$BIN/vero
 chmod +x $BIN/vero
 # adding utils to lib
+LIB=/usr/lib/vero
 mkdir -p $LIB
 curl -fsSL $UTILS/utils.sh >$LIB/utils.sh
 

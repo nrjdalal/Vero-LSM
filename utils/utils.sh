@@ -1,7 +1,4 @@
-Version="210527-221752"
-
-BIN=/usr/bin
-LIB=/usr/lib/vero
+Version="210527-221919"
 
 URL="https://raw.githubusercontent.com/nrjdalal/Vero-LSM/master"
 BIN_URL="${URL}/bin"
