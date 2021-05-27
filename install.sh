@@ -1,9 +1,9 @@
 #!/bin/bash
 
-tmpfile="$(mktemp --suffix=.zrn)"
+tmpfile="$(mktemp)"
 curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/utils/utils.sh >$tmpfile
 source $tmpfile
-rm *.zrn 2>/dev/null
+rm $tmpfile
 
 echo && echo $Version
 
