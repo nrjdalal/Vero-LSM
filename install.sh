@@ -23,7 +23,7 @@ _ONLYSUDO
 curl -fsSL $BIN_URL/vero.sh >$BIN/vero
 chmod +x $BIN/vero
 # adding utils to lib
-mkdir -p $LIB/vero
+mkdir -p $LIB
 curl -fsSL $UTILS/utils.sh >$LIB/utils.sh
 
 _SUCCESS "Vero is successfully installed."
