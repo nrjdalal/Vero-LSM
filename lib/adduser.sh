@@ -1,4 +1,3 @@
-_LINUX
 _ONLYSUDO
 
 flag=false

@@ -1,4 +1,3 @@
-_LINUX
 _ONLYSUDO
 
 npm install pm2@latest -g
