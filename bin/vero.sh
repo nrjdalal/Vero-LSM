@@ -7,7 +7,7 @@ source $LIB/utils.sh
 
 X=("$@")
 
-$url=$LIB_URL
+url=$LIB_URL
 
 echo $url
 
