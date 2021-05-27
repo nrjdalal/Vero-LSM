@@ -16,3 +16,5 @@ nginx) src "${LIB_URL}/nginx.sh" ;;
 update) /bin/bash -c "$(curl -fsSL ${URL}/install.sh)" ;;
 -v | -version | --version) src "${LIB_URL}/version.sh" ;;
 esac
+
+_SUCCESS "Task executed successfully!"
