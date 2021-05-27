@@ -9,6 +9,8 @@ X=("$@")
 
 $url=$LIB_URL
 
+echo $url
+
 case ${X[0]} in
 
 add)
