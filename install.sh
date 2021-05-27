@@ -1,15 +1,15 @@
 #!/bin/bash
 
-echo
-
 tmpfile="$(mktemp)"
 curl -fsSL https://raw.githubusercontent.com/nrjdalal/Vero-LSM/master/utils/utils.sh >$tmpfile
 source $tmpfile
 rm $tmpfile
 
 if [[ -z "${BASH_VERSION}" ]]; then
-  _FAILURE "Bash is required to interpret this script."
+  _FAILURE "Script can only be run using Bash!"
 fi
+
+echo
 
 if [[ "$(uname)" != "Linux" ]]; then
   failure "Seems like you're using $(uname)."
