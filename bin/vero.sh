@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-LIB=/usr/lib/zrn
+LIB=/usr/lib/vero
 
 source $LIB/utils.sh
 
