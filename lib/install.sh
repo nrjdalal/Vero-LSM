@@ -1,7 +1,9 @@
+url="$LIB_URL/install"
+
 case ${data[1]} in
-brew | homebrew) src "${LIB_URL}/install/homebrew.sh" ;;
-certbot) src "${LIB_URL}/install/certbot.sh" ;;
-gh) src "${LIB_URL}/install/gh.sh" ;;
-nginx) src "${LIB_URL}/install/nginx.sh" ;;
-node | nodejs) src "${LIB_URL}/install/nodejs.sh" ;;
+brew | homebrew) src "$url/homebrew.sh" ;;
+certbot) src "$url/certbot.sh" ;;
+gh) src "$url/gh.sh" ;;
+nginx) src "$url/nginx.sh" ;;
+node | nodejs) src "$url/nodejs.sh" ;;
 esac

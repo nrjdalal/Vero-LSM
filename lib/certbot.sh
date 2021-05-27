@@ -1,3 +1,5 @@
+url="$LIB_URL/certbot"
+
 case ${data[1]} in
-nginx) src "${LIB_URL}/certbot/nginx.sh" ;;
+--nginx) src "$url/certbot/nginx.sh" ;;
 esac
