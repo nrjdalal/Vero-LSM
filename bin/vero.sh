@@ -14,7 +14,7 @@ add)
 certbot)
   src "$url/certbot.sh"
   ;;
-install | i)
+i | install)
   src "$url/install.sh"
   ;;
 maintain)
