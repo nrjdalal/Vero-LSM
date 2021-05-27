@@ -12,14 +12,14 @@ if [[ -z "${BASH_VERSION}" ]]; then
 fi
 
 if [[ "$(uname)" == "Linux" ]]; then
-  success "Installing vero ver. ${Version}."
+  success "Installing Vero ver. ${Version}."
 else
   failure "Seems like you're using $(uname)."
-  _FAILURE "vero is only supported on Linux."
+  _FAILURE "Vero is only supported on Linux."
 fi
 
 _ONLYSUDO
-# adding vero to bin
+# adding Vero to bin
 curl -fsSL $BIN_URL/vero.sh >$BIN/vero
 chmod +x $BIN/vero
 # adding utils to lib
