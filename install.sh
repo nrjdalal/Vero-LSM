@@ -14,6 +14,7 @@ fi
 if [[ "$(uname)" == "Linux" ]]; then
   success "Installing zrn ver. ${Version}."
 else
+  failure "Seems like you're using $(uname)."
   _FAILURE "zrn is only supported on Linux."
 fi
 
