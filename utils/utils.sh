@@ -1,18 +1,20 @@
-Version="210527-202035"
+Version="210527-205151"
 
 URL="https://raw.githubusercontent.com/nrjdalal/zrn/master"
 BIN_URL="${URL}/bin"
 LIB_URL="${URL}/lib"
 UTILS="${URL}/utils"
 
+randomStr="$(base64 </dev/urandom | tr -dc 'a-zA-Z0-9' | head -c12)"
+
 src() {
-  tmpfile="$(mktemp).zrn"
+  tmpfile="/tmp/zrn.${randomStr}"
   curl -fsSL $1 >$tmpfile
   source $tmpfile
 }
 
 srcpart() {
-  tmpfile="$(mktemp).zrn"
+  tmpfile="/tmp/zrn.${randomStr}"
   curl -fsSL $1 | head -n$2 | tail -n$3 >$tmpfile
   source $tmpfile
 }
