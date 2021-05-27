@@ -8,12 +8,32 @@ source $LIB/utils.sh
 
 X=("$@")
 
+$url=$LIB_URL
+
 case ${X[0]} in
-adduser) src "${LIB_URL}/adduser.sh" ;;
-certbot) src "${LIB_URL}/certbot.sh" ;;
-install | i) src "${LIB_URL}/install.sh" ;;
-maintain) src "${LIB_URL}/maintain.sh" ;;
-nginx) src "${LIB_URL}/nginx.sh" ;;
-update) /bin/bash -c "$(curl -fsSL ${URL}/install.sh)" ;;
--v | -version | --version) src "${LIB_URL}/version.sh" ;;
+
+add)
+  src "$url/add.sh"
+  ;;
+
+certbot)
+  src "$url/certbot.sh"
+  ;;
+
+install | i)
+  src "$url/install.sh"
+  ;;
+
+maintain)
+  src "$url/maintain.sh"
+  ;;
+
+nginx)
+  src "$url/nginx.sh"
+  ;;
+
+-v | -version | --version)
+  src "$url/version.sh"
+  ;;
+
 esac
