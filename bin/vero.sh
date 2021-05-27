@@ -1,15 +1,11 @@
 #!/bin/bash
 set -e
-
-LIB=/usr/lib/vero
-
-source $LIB/utils.sh
-
-X=("$@")
+data=("$@")
+source /usr/lib/vero/utils.sh
 
 url="$LIB_URL"
 
-case ${X[0]} in
+case ${data[0]} in
 
 add)
   src "$url/add.sh"

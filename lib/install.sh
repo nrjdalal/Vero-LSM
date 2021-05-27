@@ -1,4 +1,4 @@
-case ${X[1]} in
+case ${data[1]} in
 brew | homebrew) src "${LIB_URL}/install/homebrew.sh" ;;
 certbot) src "${LIB_URL}/install/certbot.sh" ;;
 gh) src "${LIB_URL}/install/gh.sh" ;;
