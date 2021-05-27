@@ -7,9 +7,7 @@ source $LIB/utils.sh
 
 X=("$@")
 
-url=$LIB_URL
-
-echo $url
+url="$LIB_URL"
 
 case ${X[0]} in
 
