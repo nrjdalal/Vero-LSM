@@ -15,12 +15,3 @@ _FAILURE() {
   printf "\n${RED}   ${OFF}${BOLD}${red} %s${OFF}\n\n" "$@"
   exit 1
 }
-
-action() {
-  printf "${yellow}%s${OFF}\n" "$@"
-}
-
-_ACTION() {
-  printf "\n${YELLOW}   ${OFF}${BOLD}${yellow} %s${OFF}\n\n" "$@"
-  exit 0
-}

@@ -5,26 +5,11 @@ curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/utils/utils.sh 
 source $tmpfile
 rm $tmpfile
 
-echo && echo $Version
+echo && echo "Ver. ${cyan}${Version}${OFF}"
 
 if [[ -z "${BASH_VERSION}" ]]; then
   _FAILURE "Bash is required to interpret this script."
 fi
-
-# OS="$(uname)"
-# case $OS in
-# Linux)
-#   echo
-#   success "Linux detected. Installing zrn."
-#   BIN=/usr/bin && LIB=/usr/lib/zrn
-#   ;;
-# Darwin)
-#   echo
-#   success "macOS detected. Installing zrn."
-#   BIN=/usr/local/bin && LIB=/usr/local/lib/zrn
-#   ;;
-# *) _FAILURE "zrn is only supported on macOS and Linux." ;;
-# esac
 
 if [[ "$(uname)" == "Linux" ]]; then
   success "Linux detected. Installing zrn."
