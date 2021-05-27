@@ -3,7 +3,7 @@ success() {
 }
 
 _SUCCESS() {
-  printf "${GREEN}   ${OFF}${BOLD}${green} %s${OFF}\n" "$@"
+  printf "${GREEN}   ${OFF}${BOLD}${green} %s${OFF}\n\n" "$@"
   exit 0
 }
 
@@ -12,6 +12,6 @@ failure() {
 }
 
 _FAILURE() {
-  printf "${RED}   ${OFF}${BOLD}${red} %s${OFF}\n" "$@"
+  printf "${RED}   ${OFF}${BOLD}${red} %s${OFF}\n\n" "$@"
   exit 1
 }
