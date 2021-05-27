@@ -1,4 +1,4 @@
-Version="210527-220315"
+Version="210527-220426"
 
 BIN=/usr/bin
 LIB=/usr/lib/vero
@@ -14,14 +14,12 @@ src() {
   tmpfile="/tmp/vero.${randomStr}"
   curl -fsSL $1 >$tmpfile
   source $tmpfile
-  rm -f $tmpfile
 }
 
 srcpart() {
   tmpfile="/tmp/vero.${randomStr}"
   curl -fsSL $1 | head -n$2 | tail -n$3 >$tmpfile
   source $tmpfile
-  rm -f $tmpfile
 }
 
 # universal
