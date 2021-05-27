@@ -5,15 +5,14 @@ curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/utils/utils.sh 
 source $tmpfile
 rm $tmpfile
 
-echo && echo "Ver. ${cyan}${Version}${OFF}"
+echo && echo "Ver. ${cyan}${OFF}"
 
 if [[ -z "${BASH_VERSION}" ]]; then
   _FAILURE "Bash is required to interpret this script."
 fi
 
 if [[ "$(uname)" == "Linux" ]]; then
-  success "Linux detected. Installing zrn."
-  BIN=/usr/bin && LIB=/usr/lib/zrn
+  success "Installing zrn ver. ${Version}."
 else
   _FAILURE "zrn is only supported on Linux."
 fi
