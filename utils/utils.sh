@@ -1,4 +1,4 @@
-Version="210527-214234"
+Version="210527-215015"
 
 BIN=/usr/bin && LIB=/usr/lib/zrn
 

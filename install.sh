@@ -3,7 +3,7 @@
 echo
 
 tmpfile="$(mktemp)"
-curl -fsSL https://raw.githubusercontent.com/nrjdalal/zrn/master/utils/utils.sh >$tmpfile
+curl -fsSL https://raw.githubusercontent.com/nrjdalal/Vero-LSM/master/utils/utils.sh >$tmpfile
 source $tmpfile
 rm $tmpfile
 
@@ -12,18 +12,18 @@ if [[ -z "${BASH_VERSION}" ]]; then
 fi
 
 if [[ "$(uname)" == "Linux" ]]; then
-  success "Installing zrn ver. ${Version}."
+  success "Installing vero ver. ${Version}."
 else
   failure "Seems like you're using $(uname)."
-  _FAILURE "zrn is only supported on Linux."
+  _FAILURE "vero is only supported on Linux."
 fi
 
 _ONLYSUDO
-# ADDING ZRN TO BIN
-curl -fsSL $BIN_URL/zrn.sh >$BIN/zrn
-chmod +x $BIN/zrn
-# ADDING UTILS TO LIB
-mkdir -p $LIB/zrn
+# adding vero to bin
+curl -fsSL $BIN_URL/vero.sh >$BIN/vero
+chmod +x $BIN/vero
+# adding utils to lib
+mkdir -p $LIB/vero
 curl -fsSL $UTILS/utils.sh >$LIB/utils.sh
 
-_SUCCESS "zrn is successfully installed."
+_SUCCESS "vero is successfully installed."
