@@ -2,6 +2,10 @@ _ONLYSUDO
 
 read -p "Enter domain name ~ " DOMAIN
 
+if [ -f "/etc/nginx/sites-available/$DOMAIN.80.conf" ]; then
+  rm -f /etc/nginx/sites-available/$DOMAIN.80.conf
+fi
+
 cat >/etc/nginx/sites-available/$DOMAIN.80.conf <<CONF
 server {
   server_name $DOMAIN www.$DOMAIN;

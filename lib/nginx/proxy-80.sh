@@ -5,6 +5,10 @@ echo
 echo "Ports in use: "${BOLD}${magenta}$(grep -Eho "127.0.0.1:.{4}" /etc/nginx/sites-available/*.conf | awk '{print substr($0,length($0)-3)}')${OFF} 2>/dev/null
 read -p "Enter proxy :port ~ " PORT
 
+if [ -f "/etc/nginx/sites-available/$DOMAIN.80.conf" ]; then
+  rm -f /etc/nginx/sites-available/$DOMAIN.80.conf
+fi
+
 cat >/etc/nginx/sites-available/$DOMAIN.80.conf <<CONF
 server {
   server_name $DOMAIN www.$DOMAIN;
