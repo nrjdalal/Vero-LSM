@@ -5,5 +5,5 @@ brew | homebrew) src "$url/homebrew.sh" ;;
 certbot) src "$url/certbot.sh" ;;
 gh) src "$url/gh.sh" ;;
 nginx) src "$url/nginx.sh" ;;
-node | nodejs) src "$url/nodejs.sh" ;;
+node | nodejs) src "$url/node.sh" ;;
 esac
