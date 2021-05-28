@@ -17,7 +17,14 @@ while [ $flag != true ]; do
   fi
 done
 
-usermod -aG sudo $USERNAME
+# usermod -aG sudo $USERNAME
 
-mkdir -p /var/www
-chown $USERNAME:$USERNAME /var/www
+# mkdir -p /var/www
+# chown $USERNAME:$USERNAME /var/www
+
+# _SUCCESS "su - $USERNAME"
+
+groupadd grwx || true
+usermod -aG grwx $USERNAME
+chgrp -R grwx /var
+chmod -R g+rwx /var

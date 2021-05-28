@@ -8,6 +8,9 @@ snap install core
 snap refresh core
 
 apt install build-essential -y
-mkdir -p /var/www
 
 apt autoremove -y
+
+groupadd grwx || true
+chgrp -R grwx /srv
+chmod -R g+rwx /srv
