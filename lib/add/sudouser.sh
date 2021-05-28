@@ -21,5 +21,3 @@ usermod -aG sudo $USERNAME
 
 mkdir -p /var/www
 chown $USERNAME:$USERNAME /var/www
-
-_SUCCESS "su - $USERNAME"

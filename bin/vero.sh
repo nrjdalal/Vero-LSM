@@ -14,11 +14,11 @@ add)
 certbot)
   src "$url/certbot.sh"
   ;;
+init)
+  src "$url/init.sh"
+  ;;
 i | install)
   src "$url/install.sh"
-  ;;
-maintain)
-  src "$url/maintain.sh"
   ;;
 nginx)
   src "$url/nginx.sh"
