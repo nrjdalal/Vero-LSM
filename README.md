@@ -5,6 +5,11 @@ sudo /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nrjdalal/Vero-
 ```
 #!/bin/zsh
 
+
+cat svir.sh >/usr/local/bin/svir
+chmod +x /usr/local/bin/svir
+
+
 # if [ ! -d ~/.svir/.machines/Ubuntu-LTS-arm ]; then
 #   echo "Error: Primary instance not present"
 #   echo "Create using $(tput setaf 3)svir create ubuntu-lts-arm$(tput sgr0)"
