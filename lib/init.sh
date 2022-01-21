@@ -7,7 +7,7 @@ apt install snapd -y
 snap install core
 snap refresh core
 
-apt install build-essential -y
+apt install build-essential gcc -y
 
 apt autoremove -y
 
